@@ -1,12 +1,12 @@
 public class ThreadSynTest3 implements Runnable{
     @Override
     public void run() {
-        for (int k=0;k<5;k++){
+        for (int k=0;k<10;k++){
             System.out.println(Thread.currentThread().getName() + " : for loop :" + k);
         }
 
         synchronized (this){
-            for (int k=0; k<5;k++){
+            for (int k=0; k<10;k++){
                 System.out.println(Thread.currentThread().getName()  + " : synchronized for loop : " + k);
             }
         }
